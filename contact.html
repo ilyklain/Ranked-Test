@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Ranked Network</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script defer src="app.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="HORU_1.png" alt="Ranked Network Logo" class="logo-img">
+            <span>Ranked Network</span>
+        </div>
+        
+        <nav class="navbar">
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="games.html" class="nav-link"><i class="fas fa-gamepad"></i> Game Modes</a></li>
+                <li><a href="leaderboard.html" class="nav-link"><i class="fas fa-trophy"></i> Leaderboard</a></li>
+                <li><a href="contact.html" class="nav-link active"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="page-header fade-in">
+            <h1>Contact <span class="highlight">Us</span></h1>
+            <p class="tagline">Get in touch with the Ranked Network team</p>
+        </section>
+
+        <section class="contact-container fade-in">
+            <div class="contact-info">
+                <div class="contact-card">
+                    <i class="fas fa-headset"></i>
+                    <h3>Support</h3>
+                    <p>Need help with your account or have questions about our services?</p>
+                    <a href="https://dsc.gg/rankedrip" class="contact-link">Join our Discord</a>
+                </div>
+                
+                <div class="contact-card">
+                    <i class="fas fa-bug"></i>
+                    <h3>Report a Bug</h3>
+                    <p>Found a bug or issue? Let us know so we can improve your experience.</p>
+                    <a href="#" class="contact-link">Report Bug</a>
+                </div>
+                
+                <div class="contact-card">
+                    <i class="fas fa-briefcase"></i>
+                    <h3>Partnerships</h3>
+                    <p>Interested in partnering with Ranked Network?</p>
+                    <a href="mailto:partnerships@ranked.rip" class="contact-link">partnerships@ranked.rip</a>
+                </div>
+            </div>
+            
+            <div class="contact-form-container">
+                <h2>Send us a Message</h2>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject" name="subject">
+                            <option value="general">General Inquiry</option>
+                            <option value="support">Support Request</option>
+                            <option value="bug">Bug Report</option>
+                            <option value="partnership">Partnership Opportunity</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn primary">Send Message</button>
+                </form>
+            </div>
+        </section>
+        
+        <section class="social-connect fade-in">
+            <h2>Connect With Us</h2>
+            <p>Stay updated with the latest news, updates, and events</p>
+            
+            <div class="social-links">
+                <a href="https://dsc.gg/rankedrip" class="social-link">
+                    <i class="fab fa-discord"></i>
+                    <span>Discord</span>
+                </a>
+                <a href="#" class="social-link">
+                    <i class="fab fa-twitter"></i>
+                    <span>Twitter</span>
+                </a>
+                <a href="#" class="social-link">
+                    <i class="fab fa-youtube"></i>
+                    <span>YouTube</span>
+                
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="HORU_1.png" alt="Ranked Network Logo" class="logo-img">
+                <span>Ranked Network</span>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </div>
+            <div class="social-icons">
+                <a href="https://dsc.gg/rankedrip"><i class="fab fa-discord"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Ranked Network. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <div class="notification" id="notification">
+        <i class="fas fa-check-circle"></i>
+        <span id="notificationText">IP Copied to Clipboard</span>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Contact form submission
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const notification = document.getElementById("notification");
+                    document.getElementById("notificationText").textContent = "Message sent successfully!";
+                    notification.classList.add("show");
+                    
+                    setTimeout(() => {
+                        notification.classList.remove("show");
+                    }, 3000);
+                    
+                    // Reset form
+                    contactForm.reset();
+                });

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranked Network</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script defer src="app.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="HORU_1.png" alt=" Ranked Network Logo" class="logo-img">
+            <span>Ranked Network</span>
+        </div>
+        
+        <nav class="navbar">
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="games.html" class="nav-link"><i class="fas fa-gamepad"></i> Game Modes</a></li>
+                <li><a href="leaderboard.html" class="nav-link"><i class="fas fa-trophy"></i> Leaderboard</a></li>
+                <li><a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="hero fade-in">
+            <h1>Welcome to <span class="highlight">Ranked Network</span></h1>
+            <p class="tagline">Elevate your gameplay. Dominate the leaderboards.</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn primary" id="copyIP">Play Now</a>
+                <a href="#" class="btn secondary">Learn More</a>
+            </div>
+        </section>
+
+        <section class="features fade-in">
+            <h2>Experience Competitive PvP</h2>
+            <p>Join our HCF, KitMap, and Practice servers for an unparalleled ranked experience.</p>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Global Leaderboards</h3>
+                    <p>Compete against players from around the world and climb the ranks.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-server"></i>
+                    <h3>Multiple Game Modes</h3>
+                    <p>HCF, KitMap, and Practice servers with unique competitive experiences.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Anti-Cheat System</h3>
+                    <p>Our advanced anti-cheat ensures fair play for all participants.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="HORU_1.png" alt="Ranked Network Logo" class="logo-img">
+                <span>Ranked Network</span>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </div>
+            <div class="social-icons">
+                <a href="https.//dsc.gg/rankedrip"><i class="fab fa-discord"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Ranked Network. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("copyIP").addEventListener("click", function() {
+            const ip = "ranked.rip"; // Copia la ip de ranked
+            navigator.clipboard.writeText(ip).then(() => {
+                alert("IP copied to clipboard: " + ip);
+            }).catch(err => {
+                console.error("Error copying text: ", err);
+            });
+        });
+    </script>
+</body>
+</html>
